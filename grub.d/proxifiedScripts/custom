@@ -1,0 +1,37 @@
+#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+menuentry "Arch (fallback initramfs)" --class arch --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-linux-fallback-2a4752a5-2315-464d-ba89-0f6cae1b0524' {
+		load_video
+		set gfxpayload=keep
+		insmod gzio
+		insmod part_gpt
+		insmod fat
+		if [ x$feature_platform_search_hint = xy ]; then
+		  search --no-floppy --fs-uuid --set=root  3DC7-91A2
+		else
+		  search --no-floppy --fs-uuid --set=root 3DC7-91A2
+		fi
+		echo	'Loading Linux linux ...'
+		linux	/vmlinuz-linux root=UUID=2a4752a5-2315-464d-ba89-0f6cae1b0524 rw  loglevel=3 quiet
+		echo	'Loading initial ramdisk ...'
+		initrd	/initramfs-linux-fallback.img
+}
+menuentry "Arch" --class arch --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-simple-2a4752a5-2315-464d-ba89-0f6cae1b0524' {
+	load_video
+	set gfxpayload=keep
+	insmod gzio
+	insmod part_gpt
+	insmod fat
+	if [ x$feature_platform_search_hint = xy ]; then
+	  search --no-floppy --fs-uuid --set=root  3DC7-91A2
+	else
+	  search --no-floppy --fs-uuid --set=root 3DC7-91A2
+	fi
+	echo	'Loading Linux linux ...'
+	linux	/vmlinuz-linux root=UUID=2a4752a5-2315-464d-ba89-0f6cae1b0524 rw  loglevel=3 quiet
+	echo	'Loading initial ramdisk ...'
+	initrd	/initramfs-linux.img
+}

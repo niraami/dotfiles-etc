@@ -1,0 +1,376 @@
+*PPD-Adobe: "4.3"
+*%
+*%  Copyright CANON INC. 2017
+*%  CUPS printer driver for Canon printer devices
+*%
+*%  This program is free software; you can redistribute it and/or modify
+*%  it under the terms of the GNU General Public License as published by
+*%  the Free Software Foundation; either version 2 of the License, or
+*%  (at your option) any later version.
+*%
+*%  This program is distributed in the hope that it will be useful,
+*%  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*%  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*%  GNU General Public License for more details.
+*%
+*%  You should have received a copy of the GNU General Public License
+*%  along with this program; if not, write to the Free Software
+*%  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+*%
+
+*FormatVersion: "4.3"
+*FileVersion: "5.0"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*PCFileName: "CNM633CZK.PPD"
+*Manufacturer: "Canon"
+*Product: "(mf633c/635c)"
+*cupsVersion: 1.1
+*cupsManualCopies: False
+*cupsModelNumber: 8012
+*cupsFilter: "application/vnd.cups-raster 0 rastertoufr2"
+*ModelName: "Canon MF633C/635C UFR II"
+*ShortNickName: "MF633C/635C"
+*NickName: "Canon MF633C/635C UFR II"
+*PSVersion: "(3010.000) 550"
+*PSVersion: "(3010.000) 651"
+*LanguageLevel: "3"
+*ColorDevice: True
+*DefaultColorSpace: RGB
+*FileSystem: False
+*Throughput: "71"
+*LandscapeOrientation: Plus90
+*VariablePaperSize: False
+*TTRasterizer: Type42
+*%CNGPLPLIBNAMER: "uictlufr2r"
+*%CNGPLPLIBNAMERVER: "1.0.0"
+
+*%CNPrintLang: UFR2
+
+*OpenUI *Resolution/Resolution : PickOne
+*DefaultResolution: 600
+*Resolution 600/600 dpi: "<</HWResolution[600 600]/cupsColorSpace 1/cupsColorOrder 0/cupsBitsPerColor 8>>setpagedevice"
+*CloseUI: *Resolution
+
+*OpenUI *CNMatchingMethod/Matching Method: PickOne
+*DefaultCNMatchingMethod: None
+*CNMatchingMethod None/Printer Default: ""
+*CNMatchingMethod Photographic/General: ""
+*CNMatchingMethod Monitor/Perceptual: ""
+*CNMatchingMethod Colorimetric/Colorimetric: ""
+*CNMatchingMethod Vividphoto/Vivid Photo: ""
+*CNMatchingMethod CustomColor_1/Special Red: ""
+*CloseUI: *CNMatchingMethod
+
+*OpenUI *CNTonerSaving/Toner Save : PickOne
+*DefaultCNTonerSaving: False
+*CNTonerSaving Auto/Auto: "<< >>setpagedevice"
+*CNTonerSaving True/ON: "<< >>setpagedevice"
+*CNTonerSaving False/OFF: "<< >>setpagedevice"
+*CloseUI: *CNTonerSaving
+
+*OpenUI *MediaType/Media Type : PickOne
+*DefaultMediaType: Auto
+*MediaType Auto/Auto: "<</MediaType(Auto)>>setpagedevice"
+*MediaType PlainPaperL/Plain Paper L: "<</MediaType(PlainPaperL)>>setpagedevice"
+*MediaType PlainPaperL2/Plain Paper L2: "<</MediaType(PlainPaperL2)>>setpagedevice"
+*MediaType PlainPaperL3/Plain Paper L3: "<</MediaType(PlainPaperL3)>>setpagedevice"
+*MediaType PlainPaper1/Plain Paper 1: "<</MediaType(PlainPaper1)>>setpagedevice"
+*MediaType PlainPaper2/Plain Paper 2: "<</MediaType(PlainPaper2)>>setpagedevice"
+*MediaType RECYCLED1/Recycled Paper 1: "<</MediaType(RECYCLED1)>>setpagedevice"
+*MediaType RECYCLED2/Recycled Paper 2: "<</MediaType(RECYCLED2)>>setpagedevice"
+*MediaType COLOR/Color Paper: "<</MediaType(COLOR)>>setpagedevice"
+*MediaType HEAVY1/Heavy Paper 1: "<</MediaType(HEAVY1)>>setpagedevice"
+*MediaType HEAVY2/Heavy Paper 2: "<</MediaType(HEAVY2)>>setpagedevice"
+*MediaType LABELS/Labels: "<</MediaType(LABELS)>>setpagedevice"
+*MediaType ENVELOPE/Envelope: "<</MediaType(ENVELOPE)>>setpagedevice"
+*MediaType 1SIDECOATED1/Coated 1: "<</MediaType(1SIDECOATED1)>>setpagedevice"
+*MediaType 1SIDECOATED2/Coated 2: "<</MediaType(1SIDECOATED2)>>setpagedevice"
+*MediaType 1SIDECOATED3/Coated 3: "<</MediaType(1SIDECOATED3)>>setpagedevice"
+*CloseUI: *MediaType
+
+*OpenUI *InputSlot/Paper Source: PickOne
+*DefaultInputSlot: Auto
+*InputSlot Auto/Auto : ""
+*InputSlot Manual/Multi-purpose Tray : ""
+*InputSlot Cas1/Drawer 1 : ""
+*CloseUI: *InputSlot
+
+*OpenUI *OutputBin/Paper Destination: PickOne
+*DefaultOutputBin: Auto
+*OutputBin Auto/Auto : "<< >>setpagedevice"
+*CloseUI: *OutputBin
+
+*OpenUI *CNBarCodeMode/Barcode Adjustment Mode: PickOne
+*DefaultCNBarCodeMode: Off
+*CNBarCodeMode Off/Off: "<< >>setpagedevice"
+*CNBarCodeMode Mode1/Mode 1: "<< >>setpagedevice"
+*CNBarCodeMode Mode2/Mode 2: "<< >>setpagedevice"
+*CNBarCodeMode Mode3/Mode 3: "<< >>setpagedevice"
+*CNBarCodeMode Mode4/Mode 4: "<< >>setpagedevice"
+*CNBarCodeMode Mode5/Mode 5: "<< >>setpagedevice"
+*CloseUI: *CNBarCodeMode
+
+*OpenUI *Duplex/Duplex: PickOne
+*DefaultDuplex: None
+*Duplex None/OFF: "<</Duplex false>>setpagedevice"
+*Duplex DuplexNoTumble/ON (Long-edged Binding): "<</Duplex true/Tumble false>>setpagedevice"
+*Duplex DuplexTumble/ON (Short-edged Binding): "<</Duplex true/Tumble true>>setpagedevice"
+*CloseUI: *Duplex
+
+*OpenUI *BindEdge/BindingEdge: PickOne
+*DefaultBindEdge: Left
+*BindEdge Left/Left: "<< >>setpagedevice"
+*BindEdge Top/Top: "<< >>setpagedevice"
+*CloseUI: *BindEdge
+
+*OpenUI *Collate/Collate: PickOne
+*DefaultCollate: True
+*Collate True/Collate: "<< >>setpagedevice"
+*Collate Group/Group: "<< >>setpagedevice"
+*CloseUI: *Collate
+
+*OpenUI *CNColorMode/Color Mode: PickOne
+*DefaultCNColorMode: Auto
+*CNColorMode Auto/Auto: "<< >>setpagedevice"
+*CNColorMode color/Color: "<< >>setpagedevice"
+*CNColorMode mono/Black and White: "<< >>setpagedevice"
+*CloseUI: *CNColorMode
+
+*OpenUI *CNShiftStartPrintPosition/Shift the Position to Start Printing: Boolean
+*DefaultCNShiftStartPrintPosition: False
+*CNShiftStartPrintPosition True/True: "<< >>setpagedevice"
+*CNShiftStartPrintPosition False/False: "<< >>setpagedevice"
+*CloseUI: *CNShiftStartPrintPosition
+
+*OpenUI *CNAdvancedSmoothing/Advanced Smoothing: PickOne
+*DefaultCNAdvancedSmoothing: Off
+*CNAdvancedSmoothing Off/Off : "<< >>setpagedevice"
+*CloseUI: *CNAdvancedSmoothing
+
+*OpenUI *CNColorHalftone/Color Halftones : PickOne
+*DefaultCNColorHalftone: None
+*CNColorHalftone None/Printer Default: "<< >>setpagedevice"
+*CloseUI: *CNColorHalftone
+
+*OpenUI *CNHalftone/Halftones : PickOne
+*DefaultCNHalftone: None
+*CNHalftone None/Printer Default: "<< >>setpagedevice"
+*CloseUI: *CNHalftone
+
+*OpenUI *CNSpecialSmooth/Special Smoothing Mode: PickOne
+*DefaultCNSpecialSmooth: None
+*CNSpecialSmooth None/Printer Default: "<< >>setpagedevice"
+*CloseUI: *CNSpecialSmooth
+
+*OpenUI *CNLineControl/Line Control: PickOne
+*DefaultCNLineControl: None
+*CNLineControl None/Printer Default: "<< >>setpagedevice"
+*CloseUI: *CNLineControl
+
+*OpenUI *CNTonerVolumeAdjustment/Toner Volume Adjustment: PickOne
+*DefaultCNTonerVolumeAdjustment: None
+*CNTonerVolumeAdjustment None/Printer Default: "<< >>setpagedevice"
+*CloseUI: *CNTonerVolumeAdjustment
+
+*OpenUI *CNJobExecMode/Job Execution Mode: PickOne
+*DefaultCNJobExecMode: print
+*CNJobExecMode print/Print: "<< >>setpagedevice"
+*CNJobExecMode secured/Secured Print: "<< >>setpagedevice"
+*CloseUI: *CNJobExecMode
+
+*OpenUI *PageSize/Page Size: PickOne
+*DefaultPageSize: Letter
+*PageSize Letter: "<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*PageSize Legal: "<</PageSize[612 1008]/ImagingBBox null>>setpagedevice"
+*PageSize Statement: "<</PageSize[396 612]/ImagingBBox null>>setpagedevice"
+*PageSize Executive: "<</PageSize[522 756]/ImagingBBox null>>setpagedevice"
+*PageSize A5: "<</PageSize[419.5 595.3]/ImagingBBox null>>setpagedevice"
+*PageSize B5: "<</PageSize[515.9 728.5]/ImagingBBox null>>setpagedevice"
+*PageSize A4: "<</PageSize[595.3 841.9]/ImagingBBox null>>setpagedevice"
+*PageSize Monarch: "<</PageSize[279 540]/ImagingBBox null>>setpagedevice"
+*PageSize Com10: "<</PageSize[297 684]/ImagingBBox null>>setpagedevice"
+*PageSize dl_envelope: "<</PageSize[311.8 623.6]/ImagingBBox null>>setpagedevice"
+*PageSize Envelope_C5: "<</PageSize[459.2 649.1]/ImagingBBox null>>setpagedevice"
+*PageSize Index_3x5: "<</PageSize[216 360]/ImagingBBox null>>setpagedevice"
+*PageSize Oficio: "<</PageSize[612.2 901.4]/ImagingBBox null>>setpagedevice"
+*PageSize B_Oficio: "<</PageSize[612.2 1006.3]/ImagingBBox null>>setpagedevice"
+*PageSize M_Oficio: "<</PageSize[612.2 966.6]/ImagingBBox null>>setpagedevice"
+*PageSize G_Letter: "<</PageSize[575.4 756.8]/ImagingBBox null>>setpagedevice"
+*PageSize G_Legal: "<</PageSize[575.4 935.4]/ImagingBBox null>>setpagedevice"
+*PageSize I_Legal: "<</PageSize[609.5 978]/ImagingBBox null>>setpagedevice"
+*PageSize Foolscap: "<</PageSize[612 936]/ImagingBBox null>>setpagedevice"
+*PageSize A_Foolscap: "<</PageSize[583.9 955.3]/ImagingBBox null>>setpagedevice"
+*PageSize 16K: "<</PageSize[552.7 765.4]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion: PickOne
+*DefaultPageRegion: Letter
+*PageRegion Letter: "<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*PageRegion Legal: "<</PageSize[612 1008]/ImagingBBox null>>setpagedevice"
+*PageRegion Statement: "<</PageSize[396 612]/ImagingBBox null>>setpagedevice"
+*PageRegion Executive: "<</PageSize[522 756]/ImagingBBox null>>setpagedevice"
+*PageRegion A5: "<</PageSize[419.5 595.3]/ImagingBBox null>>setpagedevice"
+*PageRegion B5: "<</PageSize[515.9 728.5]/ImagingBBox null>>setpagedevice"
+*PageRegion A4: "<</PageSize[595.3 841.9]/ImagingBBox null>>setpagedevice"
+*PageRegion Monarch: "<</PageSize[279 540]/ImagingBBox null>>setpagedevice"
+*PageRegion Com10: "<</PageSize[297 684]/ImagingBBox null>>setpagedevice"
+*PageRegion dl_envelope: "<</PageSize[311.8 623.6]/ImagingBBox null>>setpagedevice"
+*PageRegion Envelope_C5: "<</PageSize[459.2 649.1]/ImagingBBox null>>setpagedevice"
+*PageRegion Index_3x5: "<</PageSize[216 360]/ImagingBBox null>>setpagedevice"
+*PageRegion Oficio: "<</PageSize[612.2 901.4]/ImagingBBox null>>setpagedevice"
+*PageRegion B_Oficio: "<</PageSize[612.2 1006.3]/ImagingBBox null>>setpagedevice"
+*PageRegion M_Oficio: "<</PageSize[612.2 966.6]/ImagingBBox null>>setpagedevice"
+*PageRegion G_Letter: "<</PageSize[575.4 756.8]/ImagingBBox null>>setpagedevice"
+*PageRegion G_Legal: "<</PageSize[575.4 935.4]/ImagingBBox null>>setpagedevice"
+*PageRegion I_Legal: "<</PageSize[609.5 978]/ImagingBBox null>>setpagedevice"
+*PageRegion Foolscap: "<</PageSize[612 936]/ImagingBBox null>>setpagedevice"
+*PageRegion A_Foolscap: "<</PageSize[583.9 955.3]/ImagingBBox null>>setpagedevice"
+*PageRegion 16K: "<</PageSize[552.7 765.4]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: Letter
+*ImageableArea Letter: "14.173 14.173 597.827 777.827"
+*ImageableArea Legal: "14.173 14.173 597.827 993.827"
+*ImageableArea Statement: "14.173 14.173 381.827 597.827"
+*ImageableArea Executive: "14.173 14.173 507.827 741.827"
+*ImageableArea A5: "14.173 14.173 405.327 581.127"
+*ImageableArea B5: "14.173 14.173 501.727 714.327"
+*ImageableArea A4: "14.173 14.173 581.127 827.727"
+*ImageableArea Monarch: "28.346 28.346 250.654 511.654"
+*ImageableArea Com10: "28.346 28.346 268.654 655.654"
+*ImageableArea dl_envelope: "28.346 28.346 283.454 595.254"
+*ImageableArea Envelope_C5: "28.346 28.346 430.854 620.754"
+*ImageableArea Index_3x5: "14.173 14.173 201.827 345.827"
+*ImageableArea Oficio: "14.173 14.173 598.027 887.227"
+*ImageableArea B_Oficio: "14.173 14.173 598.027 992.127"
+*ImageableArea M_Oficio: "14.173 14.173 598.027 952.427"
+*ImageableArea G_Letter: "14.173 14.173 561.227 742.627"
+*ImageableArea G_Legal: "14.173 14.173 561.227 921.227"
+*ImageableArea I_Legal: "14.173 14.173 595.327 963.827"
+*ImageableArea Foolscap: "14.173 14.173 597.827 921.827"
+*ImageableArea A_Foolscap: "14.173 14.173 569.727 941.127"
+*ImageableArea 16K: "14.173 14.173 538.527 751.227"
+
+*DefaultPaperDimension: Letter
+*PaperDimension Letter: "612 792"
+*PaperDimension Legal: "612 1008"
+*PaperDimension Statement: "396 612"
+*PaperDimension Executive: "522 756"
+*PaperDimension A5: "419.5 595.3"
+*PaperDimension B5: "515.9 728.5"
+*PaperDimension A4: "595.3 841.9"
+*PaperDimension Monarch: "279 540"
+*PaperDimension Com10: "297 684"
+*PaperDimension dl_envelope: "311.8 623.6"
+*PaperDimension Envelope_C5: "459.2 649.1"
+*PaperDimension Index_3x5: "216 360"
+*PaperDimension Oficio: "612.2 901.4"
+*PaperDimension B_Oficio: "612.2 1006.3"
+*PaperDimension M_Oficio: "612.2 966.6"
+*PaperDimension G_Letter: "575.4 756.8"
+*PaperDimension G_Legal: "575.4 935.4"
+*PaperDimension I_Legal: "609.5 978"
+*PaperDimension Foolscap: "612 936"
+*PaperDimension A_Foolscap: "583.9 955.3"
+*PaperDimension 16K: "552.7 765.4"
+
+*%CNJobAccount: True
+*%CNSecuredPrint: True
+*%CNMailBox: False
+*%CNInputSelect: False
+*%CNDisableJobAccountingBW: True
+
+*CNOEFLibName: "ufr2filterr"
+*CNPrinterName: "Canon MF633C/635C UFR II"
+*CNPDLType: "UFR2"
+*CNPrtColorSpace: "RGB"
+*CN_PdlWrapper_PdlPath: "libcanonufr2r"
+*CNFeedDirection: "Custom:3"
+
+*CNTblFormat: "2"
+*CNTblInputSlot: "3"
+*CNTblDuplex: "1"
+*CNTblOutputBin: "0"
+*CNTblSubstitute: "1"
+*CNTblMediaType: "266244"
+*CNModelMethod: "1213858060"
+*CNModelMethod2: "76"
+*CNMaxDocStr: "32"
+*CNMaxCopies: "999"
+*CNMaxGutter: "50"
+*CNShiftStartPrintPosType: "1"
+*CNExecuteMethod: "2048"
+*CNUFR2ModelMethod: "33599488"
+*CN_PDL_CTN: "1"
+*CNMaxSendDataSize: "0xFFFE"
+*CNRegistSocket: "1"
+*%CNDLCustomProfile: "1"
+*%CNUIValue: *CNShiftPositionMin(-50):False
+*%CNUIValue: *CNShiftPositionMax(50):False
+
+*UIConstraints: *Duplex DuplexTumble *BindEdge Left
+*UIConstraints: *Duplex DuplexNoTumble *BindEdge Top
+
+*UIConstraints: *PageSize Statement *Duplex DuplexNoTumble
+*UIConstraints: *PageSize Statement *Duplex DuplexTumble
+*UIConstraints: *PageSize A5 *Duplex DuplexNoTumble
+*UIConstraints: *PageSize A5 *Duplex DuplexTumble
+*UIConstraints: *PageSize Monarch *Duplex DuplexNoTumble
+*UIConstraints: *PageSize Monarch *Duplex DuplexTumble
+*UIConstraints: *PageSize Com10 *Duplex DuplexNoTumble
+*UIConstraints: *PageSize Com10 *Duplex DuplexTumble
+*UIConstraints: *PageSize dl_envelope *Duplex DuplexNoTumble
+*UIConstraints: *PageSize dl_envelope *Duplex DuplexTumble
+*UIConstraints: *PageSize Envelope_C5 *Duplex DuplexNoTumble
+*UIConstraints: *PageSize Envelope_C5 *Duplex DuplexTumble
+*UIConstraints: *PageSize Index_3x5 *Duplex DuplexNoTumble
+*UIConstraints: *PageSize Index_3x5 *Duplex DuplexTumble
+
+*UIConstraints: *Duplex DuplexNoTumble *MediaType LABELS
+*UIConstraints: *Duplex DuplexTumble *MediaType LABELS
+*UIConstraints: *Duplex DuplexNoTumble *MediaType PlainPaperL3
+*UIConstraints: *Duplex DuplexTumble *MediaType PlainPaperL3
+*UIConstraints: *Duplex DuplexNoTumble *MediaType ENVELOPE
+*UIConstraints: *Duplex DuplexTumble *MediaType ENVELOPE
+
+*DefaultFont: Courier
+*Font AvantGarde-Book: Standard "(001.006S)" Standard ROM
+*Font AvantGarde-BookOblique: Standard "(001.006S)" Standard ROM
+*Font AvantGarde-Demi: Standard "(001.007S)" Standard ROM
+*Font AvantGarde-DemiOblique: Standard "(001.007S)" Standard ROM
+*Font Bookman-Demi: Standard "(001.004S)" Standard ROM
+*Font Bookman-DemiItalic: Standard "(001.004S)" Standard ROM
+*Font Bookman-Light: Standard "(001.004S)" Standard ROM
+*Font Bookman-LightItalic: Standard "(001.004S)" Standard ROM
+*Font Courier: Standard "(002.004S)" Standard ROM
+*Font Courier-Bold: Standard "(002.004S)" Standard ROM
+*Font Courier-BoldOblique: Standard "(002.004S)" Standard ROM
+*Font Courier-Oblique: Standard "(002.004S)" Standard ROM
+*Font Helvetica: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Bold: Standard "(001.007S)" Standard ROM
+*Font Helvetica-BoldOblique: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Narrow-Bold: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow-BoldOblique: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow-Oblique: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Oblique: Standard "(001.006S)" Standard ROM
+*Font NewCenturySchlbk-Bold: Standard "(001.009S)" Standard ROM
+*Font NewCenturySchlbk-BoldItalic: Standard "(001.007S)" Standard ROM
+*Font NewCenturySchlbk-Italic: Standard "(001.006S)" Standard ROM
+*Font NewCenturySchlbk-Roman: Standard "(001.007S)" Standard ROM
+*Font Palatino-Bold: Standard "(001.005S)" Standard ROM
+*Font Palatino-BoldItalic: Standard "(001.005S)" Standard ROM
+*Font Palatino-Italic: Standard "(001.005S)" Standard ROM
+*Font Palatino-Roman: Standard "(001.005S)" Standard ROM
+*Font Symbol: Special "(001.007S)" Special ROM
+*Font Times-Bold: Standard "(001.007S)" Standard ROM
+*Font Times-BoldItalic: Standard "(001.009S)" Standard ROM
+*Font Times-Italic: Standard "(001.007S)" Standard ROM
+*Font Times-Roman: Standard "(001.007S)" Standard ROM
+*Font ZapfChancery-MediumItalic: Standard "(001.007S)" Standard ROM
+*Font ZapfDingbats: Special "(001.004S)" Standard ROM
+
+*%
+*% End of PPD file.
+*%

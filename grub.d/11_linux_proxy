@@ -1,0 +1,7 @@
+#!/bin/sh
+#THIS IS A GRUB PROXY SCRIPT
+'/etc/grub.d/proxifiedScripts/linux' | /etc/grub.d/bin/grubcfg_proxy "-*
+-#text
+-'SUBMENU' as 'Advanced options for Arch Linux'{-'Advanced options for Arch Linux'/*, -'Advanced options for Arch Linux'/'Arch Linux, with Linux linux'~7c8b14aa533fcf79f8255c617c32a7fc~, -'Advanced options for Arch Linux'/'Arch Linux, with Linux linux (fallback initramfs)'~cb35af94aca224a1ad6515b8f45e1c96~}
++'Arch Linux'~f26f41dc56154fefd66447c0d6d296aa~ as 'Arch'
+"

@@ -1,0 +1,117 @@
+# begin section managed by etckeeper (do not edit this section by hand)
+
+# new and old versions of conffiles, stored by pacman
+*.pacnew
+*.pacorig
+*.pacsave
+
+# old versions of files
+*.old
+
+# mount(8) records system state here, no need to store these
+blkid.tab
+blkid.tab.old
+
+# some other files in /etc that typically do not need to be tracked
+nologin
+ld.so.cache
+prelink.cache
+mtab
+mtab.fuselock
+.pwd.lock
+*.LOCK
+network/run
+adjtime
+lvm/cache
+lvm/archive
+X11/xdm/authdir/authfiles/*
+ntp.conf.dhcp
+.initctl
+webmin/fsdump/*.status
+webmin/webmin/oscache
+apparmor.d/cache/*
+service/*/supervise/*
+service/*/log/supervise/*
+sv/*/supervise/*
+sv/*/log/supervise/*
+*.elc
+*.pyc
+*.pyo
+init.d/.depend.*
+openvpn/openvpn-status.log
+cups/subscriptions.conf
+cups/subscriptions.conf.O
+fake-hwclock.data
+check_mk/logwatch.state
+
+# editor temp files
+*~
+.*.sw?
+.sw?
+\#*\#
+DEADJOE
+
+# end section managed by etckeeper
+
+# Let's start with the ones I know off the top of my head I shouldn't share
+shadow*
+ipsec.secrets
+
+# Unnecessary files - either different from system to system, or irrelevant for other users
+hostname
+localtime
+locale.gen
+machine-id
+resolv.conf
+
+# Ignore VPN credentials for BarracudaVPN
+barracudavpn/*
+
+# I don't know the security implications of these files being public, so let's rather not
+ca-certificates/*
+
+# Ignore any ssl certs in cups
+cups/ssl/*
+
+# Ignore symlinks inside of conf.d of fonts
+fonts/conf.d
+
+# Ignore default grub files
+grub.d/backup/*
+grub.d/bin/*
+!grub.d/backup/boot_grub/grub.cfg
+
+# Ignore NetworkManager connections - this would expose my Wifi passwords
+NetworkManager/system-connections/*
+
+# Ignore symlinked service, socket, target & timer files in systemd/
+systemd/**/*.service
+systemd/**/*.socket
+systemd/**/*.target
+systemd/**/*.timer
+
+# I do not know the security implications of these files being public, so let's rather not
+pacman.d/mirrorlist*
+pacman.d/gnupg/*
+
+# Hide secrets for iSCSI & IPSEC
+ppp/chap-secrets*
+ppp/options.*
+ppp/pap-secrets*
+
+# I do not trust the etc/ssh folder, so let's use a whitelist for this
+ssh/*
+!ssh/ssh_config
+!ssh/sshd_config
+!ssh/sshd_config.pacnew
+
+# I don't believe these files have any meaningful value - most of them are symlinks anyway
+ssl/certs/*
+ssl/private/*
+ssl/cert.pem
+
+# Ignore symlinked service, socket, target & timer files in xdg/systemd/
+xdg/systemd/**/*.service
+xdg/systemd/**/*.socket
+xdg/systemd/**/*.target
+xdg/systemd/**/*.timer

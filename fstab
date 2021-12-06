@@ -1,0 +1,17 @@
+# /dev/mapper/vg0-lv--root
+UUID=08ac493d-e04a-437a-aed1-8019e6c024fd	/         	    ext4      rw,relatime	0 1
+
+# /dev/mapper/vg0-lv--home
+UUID=d332a7fe-85c5-4bb8-853c-f14ee19ef3c8	/home     	    ext4      rw,relatime	0 2
+
+# /dev/nvme0n1p1
+UUID=3DC7-91A2      				/boot     	    vfat      rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# /dev/mapper/vg0-lv--swap
+UUID=8d8da908-c175-48a0-9d42-03510eea52e3	none      	    swap      defaults  	0 0
+
+# /dev/nvme0n1p4
+UUID=AE4EE7434EE70347				/WIN/C		      ntfs-3g		defaults,nls=utf8,umask=000,dmask=027,fmask=137,uid=1000,gid=1000,windows_names 0 0
+
+# /dev/nvme0n1p5
+UUID=E4BCFF1CBCFEE846 				/WIN/D		      ntfs-3g		defaults,nls=utf8,umask=000,dmask=027,fmask=137,uid=1000,gid=1000,windows_names 0 0
