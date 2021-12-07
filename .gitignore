@@ -115,3 +115,6 @@ xdg/systemd/**/*.service
 xdg/systemd/**/*.socket
 xdg/systemd/**/*.target
 xdg/systemd/**/*.timer
+
+# Ignore libvirt configuration - this is not useful to anyone but me, and it's not even critical
+libvirt/storage/*
