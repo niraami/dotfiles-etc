@@ -76,3 +76,4 @@ azuresphere:x:961:
 azsphere:x:1004:niraami
 named:x:40:
 libvirt:x:960:
+libvirtd:x:1005:niraami

@@ -75,3 +75,5 @@ i2c-:!*::
 azuresphere:!*::
 azsphere:!::niraami
 named:!*::
+libvirt:!*::
+libvirtd:!::
