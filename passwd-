@@ -34,3 +34,4 @@ i2p:x:964:964:I2P Router:/opt/i2p:/bin/sh
 nm-openvpn:x:963:963:NetworkManager OpenVPN:/:/usr/bin/nologin
 rpc:x:32:32:Rpcbind Daemon:/var/lib/rpcbind:/usr/bin/nologin
 named:x:40:40:BIND DNS Server:/:/usr/bin/nologin
+dnsmasq:x:959:959:dnsmasq daemon:/:/usr/bin/nologin

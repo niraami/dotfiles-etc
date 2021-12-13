@@ -77,3 +77,4 @@ azsphere:x:1004:niraami
 named:x:40:
 libvirt:x:960:niraami
 dnsmasq:x:959:
+lightdm:x:958:

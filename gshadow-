@@ -75,5 +75,5 @@ i2c-:!*::
 azuresphere:!*::
 azsphere:!::niraami
 named:!*::
-libvirt:!*::
+libvirt:!*::niraami
 dnsmasq:!*::
